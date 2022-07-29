@@ -25,7 +25,7 @@ const OurBlog = (props: any) => {
 
               return (
                 <Link href={`/our-blog/${uid}`} key={title}>
-                  <a className="smooth grid w-full grid-cols-12 overflow-hidden 560:rounded-2xl border-b 560:border border-gray-200 bg-white hover:border-secondary-main">
+                  <a className="smooth grid w-full grid-cols-12 overflow-hidden 560:rounded-lg border-b 560:border border-gray-200 bg-white hover:border-secondary-main">
                     <div className="col-span-12 560:col-span-8 880:col-span-6 p-0 pb-6 560:p-6 text-left">
                       <h4>{title}</h4>
 

@@ -34,7 +34,7 @@ export const RecentPostsSection = ({ posts }: Props) => {
   };
 
   return (
-    <div className=" relative bg-white py-12 640:py-24 1024:py-32">
+    <div className="relative bg-white py-12 640:py-24 1024:py-32">
       <div className="absolute inset-0 top-0 h-full w-full bg-primary-900"></div>
       <div className="container relative">
         <motion.h3
@@ -68,7 +68,7 @@ export const RecentPostsSection = ({ posts }: Props) => {
             preventMovementUntilSwipeScrollTolerance
             swipeScrollTolerance={50}
             showIndicators={false}
-            className="overflow-hidden rounded-2xl"
+            className="overflow-hidden rounded-lg"
           >
             {posts.map(
               ({ title, author, bannerImage, content, createdAt, uid }) => {

@@ -14,7 +14,7 @@ const BlogPost = (props: any) => {
       content,
       author: { data: author },
     },
-    first_publication_date: createdAt,
+  first_publication_date: createdAt,
   } = props.faq;
 
   const date = dayjs(createdAt);
@@ -41,7 +41,7 @@ const BlogPost = (props: any) => {
                 objectFit="cover"
                 alt={bannerImage.alt}
                 src={bannerImage.url}
-                className="rounded-xl"
+                className="rounded-lg"
                 priority
               />
             </div>
