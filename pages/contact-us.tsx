@@ -1,11 +1,9 @@
-import type { NextPage } from "next";
 import { Layout } from "components/primary/Layout";
 import Link from "next/link";
 import { ContactLinks } from "components/modules/ContactLinks";
-import { HeroImages } from "components/modules/HeroImages";
 import { PageHeader } from "components/modules/PageHeader";
 
-const ContactUs: NextPage = () => {
+const ContactUs = () => {
   return (
     <Layout title="Contact Us">
       <PageHeader

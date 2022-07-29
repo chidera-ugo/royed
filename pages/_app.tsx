@@ -1,9 +1,9 @@
-import "../styles/globals.css";
+import "styles/globals.css";
 import type { AppProps } from "next/app";
 import { BaseContextProvider } from "context/BaseContext";
 import { PrismicProvider } from "@prismicio/react";
 import { PrismicPreview } from "@prismicio/next";
-import { linkResolver, repositoryName } from "../prismicio";
+import { linkResolver, repositoryName } from "prismicio";
 import Link from "next/link";
 
 function MyApp({ Component, pageProps }: AppProps) {

@@ -1,9 +1,6 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { educationPoints, developmentPoints } from "constants/touchPoints";
-import { useInView } from "react-intersection-observer";
-import { useState } from "react";
-import { useBaseContext } from "context/BaseContext";
 
 export const TouchPointsSection = () => {
   return (
@@ -71,7 +68,7 @@ export const TouchPointsSection = () => {
         </motion.div>
       </div>
 
-      <div className="xl:gap-24 mt-12 grid-cols-12 gap-16 768:mt-64 768:grid">
+      <div className="xl:gap-24 mt-12 grid-cols-12 gap-16 768:mt-44 768:grid">
         <div className="col-span-6 my-auto">
           <p className="uppercase text-primary-main">our mission</p>
           <motion.h3

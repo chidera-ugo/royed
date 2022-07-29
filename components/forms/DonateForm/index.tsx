@@ -12,7 +12,9 @@ export const DonateForm = () => {
     <Formik
       initialValues={initialValues}
       validationSchema={validationSchema}
-      onSubmit={() => {}}
+      onSubmit={(values) => {
+        console.log(values);
+      }}
     >
       {({ handleSubmit, setValues, isValid, setFieldValue, values }) => {
         return (

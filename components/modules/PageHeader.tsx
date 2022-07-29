@@ -12,9 +12,9 @@ export const PageHeader: FC<Props> = ({ title, subTitle }: Props) => {
       <HeroImages />
       <div className="y-center absolute inset-0 h-full w-full px-8 text-center text-white">
         <div>
-          <h1 className="font-secondary text-3xl 768:text-5xl">{title}</h1>
+          <h1 className="font-secondary text-2xl 768:text-5xl">{title}</h1>
           {subTitle && (
-            <p className="mt-4 text-sm 640:mt-6 768:text-base">{subTitle}</p>
+            <p className="mt-4 text-xs 640:mt-6 768:text-base">{subTitle}</p>
           )}
         </div>
       </div>

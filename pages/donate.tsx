@@ -1,4 +1,3 @@
-import type { NextPage } from "next";
 import { Layout } from "components/primary/Layout";
 import { DonateForm } from "components/forms/DonateForm";
 import { useRouter } from "next/router";
@@ -7,7 +6,7 @@ import { YourGiftsHelp } from "components/modules/YourGiftsHelp";
 import { ForEnquiries } from "components/modules/ForEnquiries";
 import { PageHeader } from "components/modules/PageHeader";
 
-const Donate: NextPage = () => {
+const Donate = () => {
   const { query } = useRouter();
 
   return (

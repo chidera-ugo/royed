@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { CheckoutButton } from "components/buttons/CheckoutButton";
 import { SubmitButton } from "components/buttons/SubmitButton";
 import { AmountInput } from "components/inputs/AmountInput";

@@ -1,12 +1,22 @@
-import type { NextPage } from "next";
 import { Layout } from "components/primary/Layout";
 import { ContactLinks } from "components/modules/ContactLinks";
-import { faqs } from "constants/faqs";
 import { useState } from "react";
 import { Accordion } from "components/primary/Accordion";
 import { PageHeader } from "components/modules/PageHeader";
+import { createClient } from "prismicio";
+import { PrismicRichText } from "@prismicio/react";
 
-const FAQs: NextPage = () => {
+const FAQs = (props: any) => {
+  const faqs = (props.faqs as any[]).map(
+    ({ data: { answer, uid, question } }) => {
+      return {
+        question,
+        answer,
+        uid,
+      };
+    }
+  );
+
   const [currentFaq, setCurrentFaq] = useState("");
 
   return (
@@ -23,7 +33,7 @@ const FAQs: NextPage = () => {
             <Accordion
               key={question}
               isOpen={currentFaq === question}
-              body={answer}
+              body={<PrismicRichText field={answer} />}
               title={question}
               close={() => setCurrentFaq("")}
               titleClassName="font-secondary"
@@ -50,5 +60,15 @@ const FAQs: NextPage = () => {
     </Layout>
   );
 };
+
+export async function getStaticProps({ previewData }: any) {
+  const client = createClient({ previewData });
+
+  const faqs = await client.getAllByType("frequently_asked_question");
+
+  return {
+    props: { faqs },
+  };
+}
 
 export default FAQs;

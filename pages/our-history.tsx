@@ -1,15 +1,13 @@
-import type { NextPage } from "next";
 import { Layout } from "components/primary/Layout";
 import { PageHeader } from "components/modules/PageHeader";
 
-const OurHistory: NextPage = () => {
+const OurHistory = () => {
   return (
     <Layout title="Donate Now">
       <PageHeader title="Our History" />
 
-      <div className="container my-12 max-w-[900px]">
-        {/* ABOUT US */}
-        <div className="">
+      <div className="container my-24 rich-text max-w-[900px] text-justify">
+        <div>
           <p>
             Royalty Education and Development Foundation (REDF) is a Non-profit
             Organisation, duly registered under Part F of the Company and Allied
@@ -43,7 +41,6 @@ const OurHistory: NextPage = () => {
           </p>
         </div>
 
-        {/* WHAT WE DO */}
         <div className="mt-12">
           <h2 className="text-primary-main">What we do</h2>
           <p className="mt-6">

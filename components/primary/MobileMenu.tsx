@@ -1,4 +1,4 @@
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { useNavigationItems } from "hooks/useNavigationItems";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -31,8 +31,8 @@ export const MobileMenu = ({ hideMenu }: Props) => {
         animate={{ right: 0 }}
         initial={{ right: "-100%" }}
         transition={{ duration: 0.3 }}
-        exit={{ right: "-100%", transition: { duration: 0.1 } }}
-        className="z-920 relative ml-auto h-full w-4/5 bg-white 640:w-2/3"
+        exit={{ right: "-100%" }}
+        className="z-920 relative ml-auto h-full w-full bg-white"
       >
         <div>
           <div className="x-between p-4">
@@ -40,7 +40,7 @@ export const MobileMenu = ({ hideMenu }: Props) => {
             <button onClick={hideMenu}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-8 w-8 text-primary-main"
+                className="h-7 w-7 text-primary-main"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -56,13 +56,32 @@ export const MobileMenu = ({ hideMenu }: Props) => {
           </div>
 
           <div className="mt-4">
-            {navigationItems.map(({ title, subItems }) => (
-              <Accordion
-                key={title}
-                className="px-6"
-                isOpen={currentNavigationMenu === title}
-                body={
-                  !subItems ? null : (
+            {navigationItems.map(({ title, subItems }) => {
+              if (!subItems) {
+                return (
+                  <Link
+                    key={title}
+                    href={`/${title.split(" ").join("-").toLowerCase()}`}
+                  >
+                    <a
+                      className={`block py-3 text-left capitalize text-gray-800 w-full text-lg hover:underline px-6 ${
+                        pathname === `/${title}/${title.split(" ").join("")}`
+                          ? "text-primary-main"
+                          : ""
+                      }`}
+                    >
+                      {title}
+                    </a>
+                  </Link>
+                );
+              }
+
+              return (
+                <Accordion
+                  key={title}
+                  className="px-6"
+                  isOpen={currentNavigationMenu === title}
+                  body={
                     <div className="ml-3">
                       {subItems.map((item) => (
                         <Link
@@ -82,13 +101,13 @@ export const MobileMenu = ({ hideMenu }: Props) => {
                         </Link>
                       ))}
                     </div>
-                  )
-                }
-                title={title}
-                close={() => setCurrentNavigationMenu("")}
-                open={(query) => setCurrentNavigationMenu(query)}
-              />
-            ))}
+                  }
+                  title={title}
+                  close={() => setCurrentNavigationMenu("")}
+                  open={(query) => setCurrentNavigationMenu(query)}
+                />
+              );
+            })}
 
             <div className="mt-8 px-6">
               <Link href="/contact-us">

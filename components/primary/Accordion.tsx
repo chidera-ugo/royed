@@ -71,7 +71,7 @@ export const Accordion: FC<Props> = ({
 
       <AnimatePresence initial={false}>
         {isOpen && (
-          <motion.p
+          <motion.div
             initial="collapsed"
             animate="open"
             exit="collapsed"
@@ -90,7 +90,7 @@ export const Accordion: FC<Props> = ({
             className={`${bodyClassName ? bodyClassName : ""}`}
           >
             {body}
-          </motion.p>
+          </motion.div>
         )}
       </AnimatePresence>
     </button>

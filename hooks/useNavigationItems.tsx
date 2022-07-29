@@ -8,7 +8,7 @@ export const useNavigationItems = () => {
       title: "take action",
       subItems: ["donate", "volunteer"],
     },
-    { title: "media", subItems: ["our blog", "events", "gallery"] },
+    { title: "media", subItems: ["our blog", "gallery"] },
     { title: "active projects" },
   ];
 };

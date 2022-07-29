@@ -17,7 +17,7 @@ export const HeroSection = () => {
           transition={{
             duration: 0.7,
           }}
-          className="font-secondary text-5xl leading-none text-white 640:text-6xl"
+          className="font-secondary text-4xl leading-none text-white 640:text-6xl"
         >
           <div className="">Educating People. </div>
           <div className="mt-4">Developing Lands.</div>

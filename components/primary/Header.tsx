@@ -57,8 +57,12 @@ export const Header = () => {
 
         <button
           onClick={() => setShowMenu(true)}
-          className={`block 1024:hidden ${
-            headerBg === "white" ? "text-gray-700" : "text-white"
+          className={`block 1200:hidden ${
+            isHeaderChangeable()
+              ? headerBg === "white"
+                ? "text-gray-700"
+                : "text-white"
+              : ""
           }`}
         >
           <svg
@@ -77,7 +81,7 @@ export const Header = () => {
           </svg>
         </button>
 
-        <div className="my-auto hidden align-middle 1024:flex">
+        <div className="my-auto hidden align-middle 1200:flex">
           <ul className="col-span-6 my-auto mr-8 flex h-full align-middle font-normal">
             {navigationItems.map(({ title, subItems }) => {
               const variants = {

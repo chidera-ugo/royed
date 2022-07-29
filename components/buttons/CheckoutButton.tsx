@@ -35,7 +35,6 @@ export const CheckoutButton: React.FC<Props> = ({
     onClose,
   };
 
-
   return (
     <PaystackButton
       {...props}

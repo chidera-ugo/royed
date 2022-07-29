@@ -1,8 +1,8 @@
-type Props = JSX.IntrinsicElements['input'] & {};
+type Props = JSX.IntrinsicElements["input"];
 
 export const SearchInput = ({ className, ...props }: Props) => {
   return (
-    <div className={`relative ${className ?? ''}`}>
+    <div className={`relative ${className ?? ""}`}>
       <input className="generic-input pl-11" {...props} />
 
       <div className="x-center absolute inset-0 left-0 h-11 w-11 text-gray-500">

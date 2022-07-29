@@ -14,15 +14,23 @@
   }
 
   h3 {
-    @apply font-secondary text-4xl font-medium text-gray-800 640:text-5xl 640:leading-tight;
+    @apply font-secondary text-4xl leading-[48px] font-medium text-gray-800 640:text-5xl 640:leading-tight;
   }
 
   h4 {
-    @apply font-secondary text-2xl font-medium text-gray-800 640:text-xl 640:leading-tight;
+    @apply font-secondary text-xl font-medium text-gray-800 640:text-xl 640:leading-7;
   }
 
-  p {
-    @apply font-light;
+  .rich-text h4 {
+    @apply text-2xl leading-7 mt-14 text-gray-500 mb-4;
+  }
+
+  .rich-text p {
+    @apply text-gray-500;
+  }
+
+  .rich-text em {
+    @apply text-sm mt-10 block leading-7;
   }
 
   /* BUTTONS AND LINKS */

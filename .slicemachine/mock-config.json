@@ -1,0 +1,12 @@
+{
+  "_cts": {
+    "frequently_asked_question": {
+      "answer": {
+        "config": {
+          "patternType": "HEADING",
+          "blocks": 1
+        }
+      }
+    }
+  }
+}

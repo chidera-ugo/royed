@@ -11,7 +11,6 @@ export const GenericInput = ({
   className,
   isRequired,
   prompt,
-  type = "text",
   ...props
 }: Props) => {
   const [field, meta] = useField(props.name as string);

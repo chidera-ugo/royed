@@ -1,8 +1,7 @@
-import type { NextPage } from "next";
 import { Layout } from "components/primary/Layout";
-import { PageHeader } from "../components/modules/PageHeader";
+import { PageHeader } from "components/modules/PageHeader";
 
-const Volunteer: NextPage = () => {
+const Volunteer = () => {
   return (
     <Layout title="Volunteer">
       <PageHeader

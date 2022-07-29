@@ -9,9 +9,7 @@ type Props = JSX.IntrinsicElements["input"] & {
 export const GenericCheckbox = ({
   label,
   className,
-  isRequired,
   prompt,
-  type = "text",
   ...props
 }: Props) => {
   const [field, meta] = useField(props.name as string);
