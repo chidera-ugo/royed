@@ -1,26 +1,123 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700&display=swap");
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-* {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+@layer components {
   body {
-    color: white;
-    background: black;
+    @apply font-primary font-light;
+  }
+
+  h2 {
+    @apply font-secondary text-2xl leading-10;
+  }
+
+  h3 {
+    @apply font-secondary text-4xl font-medium text-gray-800 640:text-5xl 640:leading-tight;
+  }
+
+  h4 {
+    @apply font-secondary text-2xl font-medium text-gray-800 640:text-xl 640:leading-tight;
+  }
+
+  p {
+    @apply font-light;
+  }
+
+  /* BUTTONS AND LINKS */
+  .primary-button-outline {
+    @apply btn border-primary-main  text-primary-main hover:bg-gray-50 hover:bg-opacity-50;
+  }
+
+  .primary-button-solid {
+    @apply btn border-primary-main bg-primary-main text-white hover:bg-primary-800;
+  }
+
+  .secondary-button-outline {
+    @apply btn border-secondary-main  text-secondary-main hover:bg-gray-50 hover:bg-opacity-50;
+  }
+
+  .secondary-button-solid {
+    @apply btn border-secondary-main bg-secondary-main text-white hover:bg-secondary-800;
+  }
+
+  .dark-button-outline {
+    @apply btn border-gray-900  text-gray-900 hover:bg-gray-50 hover:bg-opacity-50;
+  }
+
+  .dark-button-solid {
+    @apply btn border-gray-900 bg-gray-900 text-white hover:bg-gray-800;
+  }
+
+  .link {
+    @apply smooth my-auto inline-block cursor-pointer px-5 capitalize hover:text-primary-main;
+  }
+
+  .sub-nav-link {
+    @apply smooth block px-4 py-3 capitalize hover:text-primary-main;
+  }
+
+  .btn {
+    @apply smooth y-center my-auto h-10 rounded border px-6 capitalize;
+  }
+
+  /* INPUTS */
+  .select {
+    @apply smooth rounded-lg border border-gray-200 text-sm text-gray-500;
+  }
+
+  .generic-input {
+    @apply smooth h-10 w-full rounded border border-gray-300 px-[14px] font-primary font-light text-gray-500 placeholder-gray-300 focus:border-secondary-main focus:outline-none focus:ring-4 focus:ring-secondary-main focus:ring-opacity-20;
+  }
+
+  .disabled-input {
+    @apply bg-gray-100 text-gray-500;
+  }
+
+  .generic-label {
+    @apply mb-2 block text-sm text-gray-400;
+  }
+
+  .generic-error {
+    @apply mt-1.5 block text-sm text-primary-main;
+  }
+
+  input[type="checkbox"] {
+    @apply mb-[2.5px] mr-2 h-5 w-5 appearance-none rounded border-2 border-gray-400 text-secondary-main ring-0 focus:ring-0 focus:ring-offset-0;
+  }
+
+  /* PILLS */
+  .green-pill {
+    @apply flex-shrink-0 rounded bg-secondary-main bg-opacity-[15%] px-2 py-1 text-xs font-normal uppercase text-secondary-main;
+  }
+
+  /* COMMON */
+  .x-between {
+    @apply flex justify-between align-middle;
+  }
+
+  .x-center {
+    @apply flex justify-center align-middle;
+  }
+
+  .y-center {
+    @apply flex flex-col justify-center align-middle;
+  }
+
+  .container {
+    @apply mx-auto max-w-[1440px] px-6 640:px-8 768:px-12;
+  }
+
+  .smooth {
+    @apply transition-all duration-300 ease-linear;
+  }
+
+  .card {
+    @apply rounded-lg border border-gray-200 bg-white;
+  }
+
+  .spinner {
+    @apply h-5 w-5 animate-spin text-white;
   }
 }
