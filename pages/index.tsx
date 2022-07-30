@@ -1,7 +1,7 @@
 import { Layout } from "components/primary/Layout";
 import { HeroSection } from "components/sections/HeroSection";
 import { TouchPointsSection } from "components/sections/TouchPointsSection";
-import { RecentPostsSection } from "components/sections/RecentPostsSection";
+import { FeaturedPostsSection } from "components/sections/FeaturedPostsSection";
 import { usePosts } from "hooks/usePosts";
 import { createClient } from "prismicio";
 
@@ -12,7 +12,7 @@ const Home = (props: any) => {
     <Layout>
       <HeroSection />
       <TouchPointsSection />
-      <RecentPostsSection posts={posts} />
+      <FeaturedPostsSection posts={posts} />
     </Layout>
   );
 };

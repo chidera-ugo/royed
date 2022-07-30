@@ -5,7 +5,7 @@ export const HeaderToggler = () => {
   const { changeHeaderBg } = useBaseContext();
 
   const { ref } = useInView({
-    threshold: 0,
+    threshold: 0.1,
     onChange(inView) {
       if (inView) {
         changeHeaderBg("transparent");

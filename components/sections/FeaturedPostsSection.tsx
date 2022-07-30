@@ -12,7 +12,7 @@ type Props = {
   posts: ReturnType<typeof usePosts>["posts"];
 };
 
-export const RecentPostsSection = ({ posts }: Props) => {
+export const FeaturedPostsSection = ({ posts }: Props) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const next = () => {
@@ -68,7 +68,7 @@ export const RecentPostsSection = ({ posts }: Props) => {
             preventMovementUntilSwipeScrollTolerance
             swipeScrollTolerance={50}
             showIndicators={false}
-            className="overflow-hidden rounded-lg"
+            className="overflow-hidden"
           >
             {posts.map(
               ({ title, author, bannerImage, content, createdAt, uid }) => {

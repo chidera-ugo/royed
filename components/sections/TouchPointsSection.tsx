@@ -19,7 +19,6 @@ export const TouchPointsSection = () => {
             alt="children-learning"
             src="https://images.unsplash.com/photo-1567057420215-0afa9aa9253a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1372&q=80"
             priority
-            className="rounded-lg"
           />
         </motion.div>
         <div className="col-span-6 my-auto">
@@ -109,7 +108,6 @@ export const TouchPointsSection = () => {
             alt="children-learning"
             src="https://images.unsplash.com/photo-1529313780224-1a12b68bed16?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1387&q=80"
             priority
-            className="rounded-lg"
           />
         </motion.div>
       </div>

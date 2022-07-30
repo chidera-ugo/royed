@@ -164,7 +164,7 @@ export const Header = () => {
                           y: 10,
                           transition: { duration: 0.1 },
                         }}
-                        className="absolute top-12 right-0 pt-2"
+                        className="absolute top-12 right-5 pt-2"
                       >
                         <div className="min-w-[300px] rounded-lg border border-gray-200 bg-white shadow-sm">
                           {subItems.map((item, index) => (

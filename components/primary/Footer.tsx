@@ -51,12 +51,7 @@ export const Footer = () => {
               </p>
 
               <div className="my-auto mt-10 -ml-3 block align-middle 640:flex 1280:ml-0 1280:mt-0">
-                {[
-                  "terms of use",
-                  "privacy policy",
-                  "FAQ",
-                  "charitable solicitation disclosures",
-                ].map((link) => (
+                {["FAQs", "charitable solicitation disclosures"].map((link) => (
                   <Link
                     href={`/${link.split(" ").join("-").toLowerCase()}`}
                     key={link}
