@@ -25,7 +25,7 @@ const BlogPost = (props: any) => {
     <Layout title={title}>
       <div className="container">
         <SubNavigation currentRoute={title} />
-        <div className="my-8 grid relative grid-cols-12 gap-12">
+        <div className="my-8 1200:grid relative grid-cols-12 gap-12">
           <div className="col-span-8 rich-text">
             <h3 className="text-primary-900">{title}</h3>
 
@@ -48,12 +48,10 @@ const BlogPost = (props: any) => {
               />
             </div>
 
-            <div className="text-justify">
-              <PrismicRichText field={content} />
-            </div>
+            <PrismicRichText field={content} />
           </div>
 
-          <div className="col-span-4 overflow-y-scroll relative bg-reds-500">
+          <div className="col-span-4 1200:block hidden relative">
             <YourGiftsHelp />
             <ForEnquiries />
           </div>

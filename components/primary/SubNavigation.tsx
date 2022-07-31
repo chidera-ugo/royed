@@ -18,7 +18,7 @@ export const SubNavigation = ({ currentRoute }: Props) => {
           <div className="flex align-middle" key={path}>
             {index < paths.length - 1 ? (
               <Link href={link}>
-                <a className="text-gray-900 hover:text-primary-main">
+                <a className="text-gray-900 hover:text-primary-main flex-shrink-0">
                   {path.split("-").join(" ")}
                 </a>
               </Link>
@@ -37,7 +37,7 @@ export const SubNavigation = ({ currentRoute }: Props) => {
           </div>
         );
       })}
-      <div>{currentRoute}</div>
+      <div className="line-clamp-1">{currentRoute}</div>
     </div>
   );
 };

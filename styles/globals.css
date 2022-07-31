@@ -14,7 +14,7 @@
   }
 
   h3 {
-    @apply font-secondary text-4xl leading-[48px] font-medium text-gray-800 640:text-5xl 640:leading-tight;
+    @apply font-secondary text-3xl leading-[40px] font-medium text-gray-800 640:text-5xl 640:leading-tight;
   }
 
   h4 {
@@ -26,7 +26,7 @@
   }
 
   .rich-text p {
-    @apply text-gray-500 my-6;
+    @apply text-gray-500 my-6 text-justify;
   }
 
   .rich-text em {
