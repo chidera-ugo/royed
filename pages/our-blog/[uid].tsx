@@ -5,6 +5,8 @@ import Image from "next/image";
 import { PrismicRichText } from "@prismicio/react";
 import dayjs from "dayjs";
 import { months } from "utils/months";
+import { ForEnquiries } from "components/modules/ForEnquiries";
+import { YourGiftsHelp } from "components/modules/YourGiftsHelp";
 
 const BlogPost = (props: any) => {
   const {
@@ -14,7 +16,7 @@ const BlogPost = (props: any) => {
       content,
       author: { data: author },
     },
-  first_publication_date: createdAt,
+    first_publication_date: createdAt,
   } = props.faq;
 
   const date = dayjs(createdAt);
@@ -23,7 +25,7 @@ const BlogPost = (props: any) => {
     <Layout title={title}>
       <div className="container">
         <SubNavigation currentRoute={title} />
-        <div className="my-8 grid grid-cols-12 gap-5">
+        <div className="my-8 grid relative grid-cols-12 gap-12">
           <div className="col-span-8 rich-text">
             <h3 className="text-primary-900">{title}</h3>
 
@@ -31,7 +33,7 @@ const BlogPost = (props: any) => {
               <span>By {author.fullName}</span>
               <span> | </span>
               <span>
-                {`${months[date.month()]} ${date.get("d")}, ${date.get("y")}`}
+                {`${months[date.month()]} ${date.get("D")}, ${date.get("y")}`}
               </span>
             </div>
 
@@ -49,6 +51,11 @@ const BlogPost = (props: any) => {
             <div className="text-justify">
               <PrismicRichText field={content} />
             </div>
+          </div>
+
+          <div className="col-span-4 overflow-y-scroll relative bg-reds-500">
+            <YourGiftsHelp />
+            <ForEnquiries />
           </div>
         </div>
       </div>

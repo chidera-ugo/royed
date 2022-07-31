@@ -26,11 +26,11 @@
   }
 
   .rich-text p {
-    @apply text-gray-500;
+    @apply text-gray-500 my-6;
   }
 
   .rich-text em {
-    @apply text-sm mt-10 block leading-7;
+    @apply text-sm;
   }
 
   /* BUTTONS AND LINKS */

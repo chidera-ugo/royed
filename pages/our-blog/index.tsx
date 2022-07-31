@@ -24,7 +24,7 @@ const OurBlog = (props: any) => {
 
             return (
               <Link href={`/our-blog/${uid}`} key={title}>
-                <a className="smooth group 640:grid w-full grid-cols-12 gap-6 py-3 overflow-hidden bg-white">
+                <a className="smooth group 640:grid w-full grid-cols-12 gap-6 block my-10 overflow-hidden bg-white">
                   <div className="560:block relative col-span-5 h-44 640:h-full">
                     <Image
                       layout="fill"
@@ -48,7 +48,7 @@ const OurBlog = (props: any) => {
                       <span>By {author.fullName}</span>
                       <span> | </span>
                       <span>
-                        {`${months[date.month()]} ${date.get("d")}, ${date.get(
+                        {`${months[date.month()]} ${date.get("D")}, ${date.get(
                           "y"
                         )}`}
                       </span>
